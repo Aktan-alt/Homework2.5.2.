@@ -15,7 +15,14 @@ public class Main {
             new PassangerThread("Пассажир"+i,semaphore,cdl).start();
         }
 
-
+        while (cdl.getCount() == 100){
+            try {
+                cdl.await();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+                System.out.println("Все пассажиры сели на места, Автобус полностью заполнен и выезжает в Ош");
+        }
 
     }
 

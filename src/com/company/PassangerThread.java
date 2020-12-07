@@ -25,10 +25,7 @@ public class PassangerThread extends Thread {
             cdl.countDown();
             cdl.await();
 
-            if ("Пассажир100".equals(this.getName())) {
-                System.out.println("Все пассажиры сели на места Автобус полностью заполнен и выезжает в Ош");
 
-            }
         }catch (Exception error){
 
         }
